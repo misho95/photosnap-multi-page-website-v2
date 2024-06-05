@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import PrimaryButton from "./primary-button";
+import MobileNav from "./mobile-nav";
 
 const navigation = [
   {
@@ -19,7 +20,7 @@ const navigation = [
 
 const Header = () => {
   return (
-    <header className="w-full flex items-center justify-between h-[72px] bg-white px-[24px] sm:px-[40px] lg:px-[165px] py-[28px] sm:py-[16px]">
+    <header className="w-full flex items-center justify-between h-[72px] bg-white px-[24px] sm:px-[40px] lg:px-[165px] py-[28px] sm:py-[16px] relative z-50">
       <Link href="/">
         <Image
           src={"/logo-black.svg"}
@@ -27,6 +28,7 @@ const Header = () => {
           width={170}
           height={16}
           className="w-[170px] h-[16px]"
+          priority
         />
       </Link>
 
@@ -46,6 +48,7 @@ const Header = () => {
       <span className="hidden sm:flex">
         <PrimaryButton variant="light" title="get an invite" />
       </span>
+      <MobileNav />
     </header>
   );
 };
