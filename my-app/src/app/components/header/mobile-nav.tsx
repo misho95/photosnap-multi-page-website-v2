@@ -15,7 +15,7 @@ const MobileNav = () => {
       >
         {navOpen ? (
           <Image
-            src={"/menu-close.svg"}
+            src={"/shared/mobile/close.svg"}
             alt="open"
             width={20}
             height={6}
@@ -23,7 +23,7 @@ const MobileNav = () => {
           />
         ) : (
           <Image
-            src={"/menu.svg"}
+            src={"/shared/mobile/menu.svg"}
             alt="open"
             width={16}
             height={15}
