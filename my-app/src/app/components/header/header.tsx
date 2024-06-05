@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import PrimaryButton from "./primary-button";
+import PrimaryButton from "../primary-button";
 import MobileNav from "./mobile-nav";
 
-const navigation = [
+export const navigation = [
   {
     title: "stories",
     href: "/",
@@ -32,14 +32,10 @@ const Header = () => {
         />
       </Link>
 
-      <nav className="hidden sm:flex gap-[37px]">
+      <nav className="hidden sm:flex gap-[37px] text-[#000] text-xs font-bold uppercase">
         {navigation.map((l, i) => {
           return (
-            <Link
-              key={i}
-              href={l.href}
-              className="text-[#000] active:opacity-30 text-xs font-bold uppercase"
-            >
+            <Link key={i} href={l.href} className=" active:opacity-30">
               {l.title}
             </Link>
           );

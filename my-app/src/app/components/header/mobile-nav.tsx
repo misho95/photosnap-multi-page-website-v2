@@ -9,21 +9,24 @@ const MobileNav = () => {
 
   return (
     <>
-      <button onClick={() => setNavOpen(!navOpen)} className="size-5">
+      <button
+        onClick={() => setNavOpen(!navOpen)}
+        className="size-5 flex sm:hidden"
+      >
         {navOpen ? (
           <Image
             src={"/menu-close.svg"}
             alt="open"
             width={20}
-            height={20}
+            height={6}
             className="w-auto h-auto"
           />
         ) : (
           <Image
             src={"/menu.svg"}
             alt="open"
-            width={20}
-            height={20}
+            width={16}
+            height={15}
             className="w-auto h-auto"
           />
         )}
