@@ -1,11 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MobileNavDrop from "./mobile-nav-drop";
 import Image from "next/image";
 
 const MobileNav = () => {
   const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    if (navOpen) {
+      document.body.classList.add("overflow-hidden");
+      window.scroll(0, 0);
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [navOpen]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setNavOpen(false);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>

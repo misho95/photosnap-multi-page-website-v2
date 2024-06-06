@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${dmSans.className} flex flex-col flex-1 min-h-screen`}>
         <Header />
-        <div className="flex flex-col flex-1">{children}</div>
+        <div className="flex flex-col flex-1 w-full">{children}</div>
         <Footer />
       </body>
     </html>
