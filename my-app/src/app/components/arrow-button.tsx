@@ -10,7 +10,7 @@ const ArrowButton = ({ variant, title }: PropsType) => {
   return (
     <button
       className={clsx(
-        " flex pl-[2px] justify-center items-center gap-[16px] flex-shrink-0 uppercase active:underline sm:hover:underline",
+        " flex pl-[2px] justify-between items-center gap-[16px] flex-shrink-0 uppercase active:underline sm:hover:underline w-full",
         {
           "text-white fill-white": variant === "light",
           "text-black": variant === "dark",

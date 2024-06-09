@@ -1,3 +1,5 @@
+import Features from "../components/home/features";
+import ImageCollection from "../components/home/image-collection";
 import PostMain from "../components/home/post-main";
 
 export default function Home() {
@@ -59,7 +61,8 @@ export default function Home() {
           />
         );
       })}
-      <div className="bg-white py-20">space</div>
+      <ImageCollection />
+      <Features />
     </main>
   );
 }

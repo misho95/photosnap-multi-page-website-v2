@@ -48,7 +48,12 @@ const Post = () => {
           <p className="text-[15px] font-[400] leading-[25px] opacity-60 ">
             {text}
           </p>
-          <ArrowButton variant="light" title={button} />
+          <span>
+            <ArrowButton
+              variant={color === "black" ? "light" : "dark"}
+              title={button}
+            />
+          </span>
         </div>
         {sideColor && (
           <div
