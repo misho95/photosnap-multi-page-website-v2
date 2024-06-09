@@ -20,7 +20,7 @@ export const navigation = [
 
 const Header = () => {
   return (
-    <header className="w-full flex items-center justify-between h-[72px] bg-white px-[24px] sm:px-[40px] lg:px-[165px] py-[28px] sm:py-[16px] relative z-50">
+    <header className="w-full flex items-center justify-between h-[72px] bg-white px-[24px] sm:px-[40px] lg:px-[165px] py-[28px] sm:py-[16px] relative">
       <Link href="/">
         <Image
           src={"/logo-black.svg"}

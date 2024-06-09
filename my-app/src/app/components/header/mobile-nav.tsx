@@ -10,7 +10,6 @@ const MobileNav = () => {
   useEffect(() => {
     if (navOpen) {
       document.body.classList.add("overflow-hidden");
-      window.scroll(0, 0);
     } else {
       document.body.classList.remove("overflow-hidden");
     }

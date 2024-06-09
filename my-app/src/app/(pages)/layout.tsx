@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import Header from "../components/header/header";
 import Footer from "../components/footer";
+import AnimatedHeader from "../components/header/animated-header";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -19,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.className} flex flex-col flex-1 min-h-screen`}>
-        <Header />
+        <AnimatedHeader>
+          <Header />
+        </AnimatedHeader>
         <div className="flex flex-col flex-1 w-full">{children}</div>
         <Footer />
       </body>
