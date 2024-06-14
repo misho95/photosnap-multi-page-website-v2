@@ -3,6 +3,7 @@ import ArrowButton from "../../arrow-button";
 import { useContext } from "react";
 import { PropsContext } from "../post-main";
 import clsx from "clsx";
+import { animated, useInView } from "@react-spring/web";
 
 const PostMobile = () => {
   const { title, text, button, imgs, color, sideColor } =
@@ -10,8 +11,24 @@ const PostMobile = () => {
 
   const mobileImage = imgs.find((img: any) => img.type === "desktop");
 
+  const [ref, springs] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        x: 100,
+      },
+      to: {
+        opacity: 1,
+        x: 0,
+      },
+    }),
+    {
+      rootMargin: "-40% 0%",
+    }
+  );
+
   return (
-    <section className="w-full flex flex-col sm:hidden relative">
+    <section ref={ref} className="w-full flex flex-col sm:hidden relative">
       <Image
         src={mobileImage.url}
         alt="create-and-share"
@@ -28,7 +45,10 @@ const PostMobile = () => {
           }
         )}
       >
-        <div className="max-w-[318px] flex flex-col gap-[21px] justify-center items-start">
+        <animated.div
+          style={springs}
+          className="max-w-[318px] flex flex-col gap-[21px] justify-center items-start"
+        >
           <h1 className="text-[32px]  font-bold leading-[40px] tracking-[3.333px] uppercase ">
             {title}
           </h1>
@@ -41,7 +61,7 @@ const PostMobile = () => {
               title={button}
             />
           </span>
-        </div>
+        </animated.div>
 
         {sideColor && (
           <div

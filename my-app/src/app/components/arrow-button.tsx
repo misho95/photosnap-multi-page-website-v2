@@ -1,14 +1,15 @@
 import clsx from "clsx";
 import ArrowSVG from "/public/shared/desktop/arrow.svg";
 
-type PropsType = {
+type ButtonProps = React.HtmlHTMLAttributes<HTMLButtonElement> & {
   variant: "dark" | "light";
   title: string;
 };
 
-const ArrowButton = ({ variant, title }: PropsType) => {
+const ArrowButton = ({ variant, title, ...props }: ButtonProps) => {
   return (
     <button
+      {...props}
       className={clsx(
         " flex pl-[2px] justify-between items-center gap-[16px] flex-shrink-0 uppercase active:underline sm:hover:underline w-full",
         {

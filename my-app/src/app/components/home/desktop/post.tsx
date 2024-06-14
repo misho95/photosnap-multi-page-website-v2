@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import ArrowButton from "../../arrow-button";
 import { useContext } from "react";
 import { PropsContext } from "../post-main";
 import clsx from "clsx";
+import { animated, useInView, useSpring } from "@react-spring/web";
 
 const Post = () => {
   const { title, text, button, imgs, color, side, sideColor } =
@@ -12,8 +15,27 @@ const Post = () => {
 
   const tabletImage = imgs.find((img: any) => img.type === "tablet");
 
+  const [ref, springs] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        x: 100,
+      },
+      to: {
+        opacity: 1,
+        x: 0,
+      },
+    }),
+    {
+      rootMargin: "-40% 0%",
+    }
+  );
+
   return (
-    <section className="w-full aspect-[1.1815] lg:aspect-[2.215] hidden sm:flex">
+    <section
+      ref={ref}
+      className="w-full aspect-[1.1815] lg:aspect-[2.215] hidden sm:flex "
+    >
       {side === "right" && (
         <>
           <Image
@@ -41,7 +63,10 @@ const Post = () => {
           }
         )}
       >
-        <div className="max-w-[387px] flex flex-col gap-[21px] justify-center items-start">
+        <animated.div
+          style={springs}
+          className="max-w-[387px] flex flex-col gap-[21px] justify-center items-start"
+        >
           <h1 className="text-[40px]  font-bold leading-[48px] tracking-[4.167px] uppercase ">
             {title}
           </h1>
@@ -54,7 +79,7 @@ const Post = () => {
               title={button}
             />
           </span>
-        </div>
+        </animated.div>
         {sideColor && (
           <div
             className="w-[6px] h-[46.77%] absolute left-0 top-1/2 -translate-y-1/2"

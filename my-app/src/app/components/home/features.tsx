@@ -1,3 +1,6 @@
+"use client";
+
+import { animated, useInView } from "@react-spring/web";
 import clsx from "clsx";
 import Image from "next/image";
 
@@ -35,9 +38,26 @@ const Features = ({ full = false }: { full?: boolean }) => {
     },
   ];
 
+  const [ref, springs] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        y: 100,
+      },
+      to: {
+        opacity: 1,
+        y: 0,
+      },
+    }),
+    {
+      rootMargin: "-15% 0%",
+    }
+  );
+
   return (
-    <section className="flex justify-center items-center my-[160px]">
-      <div
+    <section ref={ref} className="flex justify-center items-center my-[160px]">
+      <animated.div
+        style={springs}
         className={clsx("grid  gap-[104px_44px]", {
           "grid-cols 1 lg:grid-cols-3": full === false,
           "grid-cols 1 sm:grid-cols-2 lg:grid-cols-3": full === true,
@@ -64,7 +84,7 @@ const Features = ({ full = false }: { full?: boolean }) => {
                 />
               );
             })}
-      </div>
+      </animated.div>
     </section>
   );
 };
