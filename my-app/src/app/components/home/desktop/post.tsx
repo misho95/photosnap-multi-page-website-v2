@@ -5,7 +5,7 @@ import ArrowButton from "../../arrow-button";
 import { useContext } from "react";
 import { PropsContext } from "../post-main";
 import clsx from "clsx";
-import { animated, useInView, useSpring } from "@react-spring/web";
+import { animated, useInView } from "@react-spring/web";
 
 const Post = () => {
   const { title, text, button, imgs, color, side, sideColor } =
@@ -32,9 +32,9 @@ const Post = () => {
   );
 
   return (
-    <section
+    <article
       ref={ref}
-      className="w-full aspect-[1.1815] lg:aspect-[2.215] hidden sm:flex "
+      className="w-full aspect-[1.1815] lg:aspect-[2.215] hidden sm:flex"
     >
       {side === "right" && (
         <>
@@ -108,7 +108,7 @@ const Post = () => {
           />
         </>
       )}
-    </section>
+    </article>
   );
 };
 

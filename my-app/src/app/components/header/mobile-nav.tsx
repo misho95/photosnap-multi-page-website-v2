@@ -9,9 +9,9 @@ const MobileNav = () => {
 
   useEffect(() => {
     if (navOpen) {
-      document.body.classList.add("overflow-hidden");
+      document.body.classList.add("overflow-y-hidden");
     } else {
-      document.body.classList.remove("overflow-hidden");
+      document.body.classList.remove("overflow-y-hidden");
     }
   }, [navOpen]);
 

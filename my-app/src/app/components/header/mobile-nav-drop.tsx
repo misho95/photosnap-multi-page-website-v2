@@ -16,9 +16,9 @@ const MobileNavDrop = () => {
   }
 
   return createPortal(
-    <div className="fixed top-[71px] left-0 w-full h-screen bg-black/50 z-40 block sm:hidden">
-      <div className="flex flex-col gap-5 w-full bg-white p-[32px]">
-        <nav className="flex flex-col gap-5 items-center text-[#000] text-[15px] font-bold uppercase">
+    <div className="fixed top-[71px] left-0 w-full h-screen bg-black/50 z-40 block sm:hidden ">
+      <div className="flex flex-col gap-5 w-full bg-white p-[32px] ">
+        <nav className="flex flex-col gap-5 items-center text-[#000] text-[15px] font-bold uppercase ">
           {navigation.map((l, i) => {
             return (
               <Link key={i} href={l.href} className="active:opacity-30">

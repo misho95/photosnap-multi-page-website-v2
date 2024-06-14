@@ -19,11 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.className} flex flex-col flex-1 min-h-screen`}>
+      <body
+        className={`${dmSans.className} flex flex-col flex-1 min-h-screen w-full`}
+      >
         <AnimatedHeader>
           <Header />
         </AnimatedHeader>
-        <div className="flex flex-col flex-1 w-full">{children}</div>
+        <main className="flex flex-col flex-1 w-full">{children}</main>
         <Footer />
       </body>
     </html>

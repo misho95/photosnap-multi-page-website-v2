@@ -28,7 +28,7 @@ const PostMobile = () => {
   );
 
   return (
-    <section ref={ref} className="w-full flex flex-col sm:hidden relative">
+    <article ref={ref} className="w-full flex flex-col sm:hidden">
       <Image
         src={mobileImage.url}
         alt="create-and-share"
@@ -38,7 +38,7 @@ const PostMobile = () => {
       />
       <div
         className={clsx(
-          " flex justify-center items-center flex-shrink-0 relative min-h-[419px] p-3",
+          " flex justify-center items-center flex-shrink-0 relative min-h-[419px] p-3 overflow-hidden",
           {
             "bg-black text-white": color === "black",
             "bg-white text-black": color === "white",
@@ -73,7 +73,7 @@ const PostMobile = () => {
           />
         )}
       </div>
-    </section>
+    </article>
   );
 };
 

@@ -46,23 +46,25 @@ export default function Home() {
   ];
 
   return (
-    <main>
-      {posts.map((d, i) => {
-        return (
-          <PostMain
-            key={i}
-            title={d.title}
-            text={d.text}
-            button={d.button}
-            imgs={d.imgs}
-            color={d.color}
-            side={d.side}
-            sideColor={d.sideColor}
-          />
-        );
-      })}
+    <>
+      <section>
+        {posts.map((d, i) => {
+          return (
+            <PostMain
+              key={i}
+              title={d.title}
+              text={d.text}
+              button={d.button}
+              imgs={d.imgs}
+              color={d.color}
+              side={d.side}
+              sideColor={d.sideColor}
+            />
+          );
+        })}
+      </section>
       <ImageCollection />
       <Features />
-    </main>
+    </>
   );
 }

@@ -41,7 +41,7 @@ const AnimatedHeader = ({ children }: { children: ReactNode }) => {
   });
 
   return (
-    <animated.div style={{ ...props }} className="sticky top-0 z-50">
+    <animated.div style={{ ...props }} className="sticky top-0 z-50 w-full">
       {children}
     </animated.div>
   );
