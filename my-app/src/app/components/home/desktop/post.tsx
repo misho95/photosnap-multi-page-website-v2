@@ -54,6 +54,7 @@ const Post = () => {
           />
         </>
       )}
+
       <div
         className={clsx(
           "w-[64.45%] lg:w-[42.36%]   flex justify-center items-center flex-shrink-0 relative p-5",

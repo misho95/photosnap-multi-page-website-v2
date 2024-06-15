@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { navigation } from "./header/header";
 import FaceBookSVG from "/public/shared/desktop/facebook.svg";
 import YouTubeSVG from "/public/shared/desktop/youtube.svg";
 import TwitterSVG from "/public/shared/desktop/twitter.svg";
 import PinterestSVG from "/public/shared/desktop/pinterest.svg";
 import InstagramSVG from "/public/shared/desktop/instagram.svg";
 import ArrowButton from "./arrow-button";
+import { navigation } from "@/data/navigation-links";
 
 const Footer = () => {
   return (

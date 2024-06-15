@@ -2,21 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PrimaryButton from "../primary-button";
 import MobileNav from "./mobile-nav";
-
-export const navigation = [
-  {
-    title: "stories",
-    href: "/",
-  },
-  {
-    title: "features",
-    href: "/",
-  },
-  {
-    title: "pricing",
-    href: "/",
-  },
-];
+import { navigation } from "@/data/navigation-links";
 
 const Header = () => {
   return (
