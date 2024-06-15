@@ -20,9 +20,8 @@ const ImageCollection = () => {
     >
       {trails.map((props, i) => {
         return (
-          <animated.div style={props}>
+          <animated.div key={i} style={props}>
             <ImageCollectionArticle
-              key={i}
               img={images[i].img}
               title={images[i].title}
               author={images[i].author}

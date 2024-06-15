@@ -5,9 +5,10 @@ type PropsType = {
   img: string;
   title: string;
   author: string;
+  date?: string;
 };
 
-const ImageCollectionArticle = ({ img, title, author }: PropsType) => {
+const ImageCollectionArticle = ({ img, title, author, date }: PropsType) => {
   return (
     <article className="aspect-[0.72] w-full relative lg:hover:-translate-y-[30px] duration-200 group">
       <Image
@@ -24,10 +25,11 @@ const ImageCollectionArticle = ({ img, title, author }: PropsType) => {
             "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0.27%, rgba(0, 0, 0, 0.66) 100%)",
         }}
       />
-      <div className="absolute top-0 w-full h-full flex flex-col justify-end items-start gap-5 p-[40px] text-white z-20">
+      <div className="absolute top-0 w-full h-full flex flex-col justify-end items-start gap-[4px] p-[40px] text-white z-20">
+        <h5 className="text-[13px] font-normal">{date}</h5>
         <h3 className="font-bold text-[18px] leading-[25px]">{title}</h3>
         <h5 className="text-[13px] font-normal">by {author}</h5>
-        <div className="w-full h-[1px] bg-white/25" />
+        <div className="w-full h-[1px] bg-white/25 my-[16px]" />
         <ArrowButton variant={"light"} title={"read story"} />
       </div>
       <div

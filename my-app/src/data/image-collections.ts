@@ -1,0 +1,98 @@
+export const images = [
+  {
+    img: "/stories/desktop/mountains.jpg",
+    title: "The Mountains",
+    author: "John Appleseed",
+    date: "April 16th 2020",
+  },
+  {
+    img: "/stories/desktop/cityscapes.jpg",
+    title: "Sunset Cityscapes",
+    author: "Benjamin Cruz",
+    date: "April 14th 2020",
+  },
+  {
+    img: "/stories/desktop/18-days-voyage.jpg",
+    title: "18 Days Voyage",
+    author: "Alexei Borodin",
+    date: "April 11th 2020",
+  },
+  {
+    img: "/stories/desktop/architecturals.jpg",
+    title: "Architecturals",
+    author: "Samantha Brooke",
+    date: "April 9th 2020",
+  },
+  {
+    img: "/stories/desktop/world-tour.jpg",
+    title: "World Tour 2019",
+    author: "Timothy Wagner",
+    date: "April 7th 2020",
+  },
+  {
+    img: "/stories/desktop/unforeseen-corners.jpg",
+    title: "Unforeseen Corners",
+    author: "William Malcolm",
+    date: "April 3rd 2020",
+  },
+  {
+    img: "/stories/desktop/king-on-africa.jpg",
+    title: "King on Africa: Part II",
+    author: "Tim Hillenburg",
+    date: "March 29th 2020",
+  },
+  {
+    img: "/stories/desktop/trip-to-nowhere.jpg",
+    title: "The Trip to Nowhere",
+    author: "Felicia Rourke",
+    date: "March 21st 2020",
+  },
+  {
+    img: "/stories/desktop/rage-of-the-sea.jpg",
+    title: "Rage of The Sea",
+    author: "Mohammed Abdul",
+    date: "March 19th 2020",
+  },
+  {
+    img: "/stories/desktop/running-free.jpg",
+    title: "Running Free",
+    author: "Michelle",
+    date: "March 16th 2020",
+  },
+  {
+    img: "/stories/desktop/18-days-voyage.jpg",
+    title: "Behind the Waves",
+    author: "Lamarr Wilson",
+    date: "March 11th 2020",
+  },
+  {
+    img: "/stories/desktop/calm-waters.jpg",
+    title: "Calm Waters",
+    author: "Samantha Brooke",
+    date: "March 9th 2020",
+  },
+  {
+    img: "/stories/desktop/milky-way.jpg",
+    title: "The Milky Way",
+    author: "Benjamin Cruz",
+    date: "March 5th 2020",
+  },
+  {
+    img: "/stories/desktop/unforeseen-corners.jpg",
+    title: "Night at The Dark Forest",
+    author: "Mohammed Abdul",
+    date: "March 4th 2020",
+  },
+  {
+    img: "/stories/desktop/somwarpet.jpg",
+    title: "Somwarpet’s Beauty",
+    author: "Michelle",
+    date: "March 1st 2020",
+  },
+  {
+    img: "/stories/desktop/trip-to-nowhere.jpg",
+    title: "Land of Dreams",
+    author: "William Malcolm",
+    date: "February 25th 2020",
+  },
+];

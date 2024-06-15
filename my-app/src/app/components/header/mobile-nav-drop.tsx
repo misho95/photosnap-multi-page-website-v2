@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { navigation } from "./header";
 import Link from "next/link";
 import PrimaryButton from "../primary-button";
+import { navigation } from "@/data/navigation-links";
 
 const MobileNavDrop = () => {
   const [body, setBody] = useState<any>(null);
