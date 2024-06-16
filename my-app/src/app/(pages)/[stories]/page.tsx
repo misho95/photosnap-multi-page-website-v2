@@ -7,7 +7,7 @@ const StoriesPage = () => {
   return (
     <>
       <section className="w-full bg-cover bg-center bg-no-repeat relative flex items-center ">
-        <article className="absolute max-w-[387px] w-fit h-fit z-20 text-white mx-[112px] flex flex-col gap-[24px]">
+        <article className="absolute max-w-[387px] w-fit h-fit z-20 text-white mx-[36px] lg:mx-[112px] flex flex-col gap-[24px]">
           <h5 className="text-xs leading-[2px] font-bold">
             LAST MONTH’S FEATURED STORY
           </h5>
