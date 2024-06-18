@@ -25,7 +25,9 @@ export default function RootLayout({
         <AnimatedHeader>
           <Header />
         </AnimatedHeader>
-        <main className="flex flex-col flex-1 w-full">{children}</main>
+        <main className="flex flex-col flex-1 w-full overflow-hidden">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
