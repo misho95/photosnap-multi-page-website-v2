@@ -10,7 +10,7 @@ import { navigation } from "@/data/navigation-links";
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col sm:flex-row items-center justify-between gap-10 sm:h-[284px] lg:h-[250px] bg-black text-white px-[33px] sm:px-[171px] py-[56px] sm:py-[64px] relative">
+    <footer className="w-full flex flex-col sm:flex-row items-center justify-between gap-10 sm:h-[284px] lg:h-[250px] bg-black text-white px-[33px] lg:px-[171px] py-[56px] sm:py-[64px] relative">
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-[50px_121px] lg:gap-[85px_100px]">
         <Link href="/">
           <Image

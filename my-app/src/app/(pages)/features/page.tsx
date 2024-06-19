@@ -1,3 +1,4 @@
+import BetaFooter from "@/app/components/beta-footer";
 import Features from "@/app/components/home/features";
 import PostMain from "@/app/components/home/post-main";
 
@@ -20,6 +21,7 @@ const FeaturesPage = () => {
         sideColor
       />
       <Features full />
+      <BetaFooter />
     </>
   );
 };

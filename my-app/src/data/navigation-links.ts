@@ -9,6 +9,6 @@ export const navigation = [
   },
   {
     title: "pricing",
-    href: "/",
+    href: "/pricing",
   },
 ];

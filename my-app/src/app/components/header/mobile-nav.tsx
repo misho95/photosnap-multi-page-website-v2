@@ -3,8 +3,11 @@
 import { useEffect, useState } from "react";
 import MobileNavDrop from "./mobile-nav-drop";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const MobileNav = () => {
+  const [currentPath, setCurrentPath] = useState("");
+  const pathname = usePathname();
   const [navOpen, setNavOpen] = useState(false);
 
   useEffect(() => {
@@ -26,6 +29,13 @@ const MobileNav = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    if (currentPath !== pathname) {
+      setCurrentPath(pathname);
+      setNavOpen(false);
+    }
+  }, [pathname]);
 
   return (
     <>

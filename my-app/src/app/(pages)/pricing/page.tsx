@@ -1,25 +1,23 @@
-import Features from "@/app/components/home/features";
 import PostMain from "@/app/components/home/post-main";
 
 const PricingPage = () => {
   return (
     <>
       <PostMain
-        title={"FEATURES"}
+        title={"PRICING"}
         text={
-          "We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their stories."
+          "Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos."
         }
         button={""}
         imgs={[
-          { type: "desktop", url: "/features/desktop/hero.jpg" },
-          { type: "tablet", url: "/features/tablet/hero.jpg" },
-          { type: "mobile", url: "/features/mobile/hero.jpg" },
+          { type: "desktop", url: "/pricing/desktop/hero.jpg" },
+          { type: "tablet", url: "/pricing/tablet/hero.jpg" },
+          { type: "mobile", url: "/pricing/mobile/hero.jpg" },
         ]}
         color={"black"}
         side={"left"}
         sideColor
       />
-      <Features full />
     </>
   );
 };
